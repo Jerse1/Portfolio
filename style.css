@@ -202,7 +202,18 @@ h2 {
     outline-color: rgba(88, 223, 129, 0.253);
     outline-style: solid;
     outline-width: 0.5px;
-    box-shadow: 0 0 0 0 rgba(133, 133, 133, 0.5), 0 0 0 0 rgba(133, 133, 133, 0.5);
+
+    transition-property: box-shadow;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.gamelink:hover {
+    box-shadow: 0 0 10px 0.5px rgba(50, 230, 26, 0.5), 0 0 10px 0.5px rgba(50, 230, 26, 0.5);
+
+    transition-property: box-shadow;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .discordinvite {
@@ -218,13 +229,20 @@ h2 {
     outline-color: rgba(88, 180, 223, 0.253);
     outline-style: solid;
     outline-width: 0.5px;
-    box-shadow: 0 0 0 0 rgba(133, 133, 133, 0.5), 0 0 0 0 rgba(133, 133, 133, 0.5);
+
+    transition-property: box-shadow;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);   
 }
 
-.box {
-    background: red;
-    height: 100 vh;
- }
+.discordinvite:hover {
+    box-shadow: 0 0 10px 0.5px rgba(56, 75, 248, 0.5), 0 0 10px 0.5px rgba(56, 75, 248, 0.5);
+
+    transition-property: box-shadow;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
 
 .gamename:link, .gamename:visited {
     color: rgb(255, 255, 255);
@@ -235,12 +253,27 @@ h2 {
     color: rgb(255, 0, 0);
   }
 
+.about {
+    font-size: 16px;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto Mono', monospace;
+}
+
+.lang {
+    font-size: 16px;
+    text-align: left;
+    font-family: 'Roboto Mono', monospace;
+    color: rgb(24, 95, 250);
+    font-weight: bold;
+}
+
 #aboutme {
     width:500px;
     position: absolute;
     top: 90%;
     margin-left: 15px;
-    margin-top: -10px;
+    margin-top: -35px;
 
     font-size: 18px;
     text-align: left;
