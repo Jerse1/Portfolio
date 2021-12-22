@@ -19,23 +19,7 @@ function findPos(obj) {
   }
 }
 
-async function Tutor() {
-  var elem = document.getElementById("myAnimation");
 
-  for (let i = 300; i >= 0; --i) {
-
-    await sleep(1);
-    elem.style.backgroundColor = "rgba(255, 255, 255," +  easeInOutQuart(i/300)  + ')';
-
-    if (easeInOutQuart(i/300) <= 0.1){
-      elem.style.zIndex = "0";
-    }
-    
-    
-  }
-  
-}
-Tutor();
 
 let links = document.querySelectorAll('a');
 if (links){
