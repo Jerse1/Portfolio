@@ -21,8 +21,6 @@ async function Tutor() {
 
   for (let i = 300; i >= 0; --i) {
 
-    
-
     await sleep(1);
 
     elem.style.backgroundColor = "rgba(100, 100, 100," +  easeInOutQuart(i/300)  + ')';
