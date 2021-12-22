@@ -4,19 +4,25 @@
     padding: 0;
 }
 
+
+html, body {
+    margin: 0px;
+    height: 100%;
+ }
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    background-color: rgb(209, 209, 209);
-    height: 400%;
+    background-color: rgb(21, 20, 29);
+    height: 100%;
 }
 
 h2 {
     font-family: 'Ubuntu', sans-serif;
     text-align: center;
-    color: rgb(26, 26, 26)
+    color: rgb(255, 255, 255)
 }
 
 .mainwrapper {
@@ -33,8 +39,8 @@ h2 {
 .link {
     height: 70px;
     width: 70px;
-    border: 0px solid rgba(175, 175, 175,0); 
-    background-color: rgba(100,100,100, 0);
+    border: 0px solid rgba(255, 255, 255, 0); 
+    background-color: rgba(255, 255, 255, 0);
 
     position: absolute;
     top: 50%;
@@ -88,21 +94,32 @@ h2 {
 }
 
 .btn {
-    width:130px;
-    height:40px;
-
+    position: fixed;
+    top: 40px;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    appearance: none;
+    background-color: rgb(255,255,255, 0);
+    border: 0.8px solid rgb(255, 255, 255, 0.6);;
+    border-radius: 15px;
     color: rgb(255, 255, 255);
-    background-color: rgb(0, 0, 0);
-    border-radius: 30px;
-    outline-color: rgb(126, 126, 126);
-    outline-style: solid;
-    outline-width: 1px;
-    box-shadow: 0 0 0 0 rgba(133, 133, 133, 0.5), 0 0 0 0 rgba(133, 133, 133, 0.5);
-    
+    cursor: pointer;
+    padding: 10px 40px;
+    display: flex;
+    align-self: center;
+    font-size: 17px;
+    line-height: 1;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
     transition-property:  transform, box-shadow;
     transition-duration: 0.3s, 0.3s;
     transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);  
+    z-index: 15;
+    
 }
+
+
 
 .btn:hover {
     transform: translate(0, -5px);
@@ -124,6 +141,7 @@ h2 {
     transition-property: width, height, margin-top, margin-left;
     transition-duration: 0.8s, 0.8s, 0.3s, 0.8s;
     transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+    filter: invert(0.9);
 }
 
 .Logo:hover {
@@ -141,27 +159,75 @@ h2 {
 }
 
 .gamename {
-    color: rgba(0, 0, 0, 1);
+    width:500px;
+    color: rgb(255, 255, 255);
     font-family: 'Open Sans', sans-serif;
-    position: absolute;
+    position:absolute;
     font-weight: 1500;
     text-decoration: none;
-    margin-top: 155px;
-    margin-left: -150px;
+    margin-top: 0px;
+    margin-left: 10px;
 } 
 
 .gamedescription {
-    color: rgba(0, 0, 0, 1);
+    color: rgba(255, 255, 255, 1);
     font-family: 'Open Sans', sans-serif;
-    font-size: 17px;
-    position: absolute;
+    font-size: 18px;
+    position:absolute;
     text-decoration: none;
-    margin-top: 180px;
-    margin-left: -150px;
+    margin-top: 25px;
+    margin-left: 10px;
 } 
 
+.experiencetype {
+    color: rgba(255, 255, 255, 0.98);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    position:absolute;
+    text-decoration: none;
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+.gamelink {
+    color: rgba(45, 218, 137, 0.788);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+    position:absolute;
+    text-decoration: none;
+    margin-top: 95px;
+    margin-left: 10px;
+    background-color: rgba(66, 204, 66, 0.1);
+    border-radius: 5px;
+    outline-color: rgba(88, 223, 129, 0.253);
+    outline-style: solid;
+    outline-width: 0.5px;
+    box-shadow: 0 0 0 0 rgba(133, 133, 133, 0.5), 0 0 0 0 rgba(133, 133, 133, 0.5);
+}
+
+.discordinvite {
+    color: rgba(45, 114, 218, 0.788);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+    position:absolute;
+    text-decoration: none;
+    margin-top: 125px;
+    margin-left: 10px;
+    background-color: rgba(80, 66, 204, 0.1);
+    border-radius: 5px;
+    outline-color: rgba(88, 180, 223, 0.253);
+    outline-style: solid;
+    outline-width: 0.5px;
+    box-shadow: 0 0 0 0 rgba(133, 133, 133, 0.5), 0 0 0 0 rgba(133, 133, 133, 0.5);
+}
+
+.box {
+    background: red;
+    height: 100 vh;
+ }
+
 .gamename:link, .gamename:visited {
-    color: rgba(0, 0, 0, 1);
+    color: rgb(255, 255, 255);
     text-decoration: none;
   }
   
@@ -172,12 +238,13 @@ h2 {
 #aboutme {
     width:500px;
     position: absolute;
-    top: 80%;
-    margin-left: 20px;
-    margin-top: 40px;
+    top: 90%;
+    margin-left: 15px;
+    margin-top: -10px;
 
-    font-size: 20px;
+    font-size: 18px;
     text-align: left;
+    transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 #SocialText {
@@ -209,15 +276,14 @@ h2 {
     font-family: 'Open Sans', sans-serif;
     text-align: center;
     font-size: 40px;
-    color: rgba(0, 0, 0, 1);
+    color: rgb(255, 255, 255);
 }
 
 #grid-container {
-    grid-template-columns: 150px 480px auto;
+    grid-template-columns: 400px 480px auto;
     position: absolute;
-    text-align: center; 
     top: 150%;
-    left: 40%;
+    left: 26%;
     margin-top: -250px;
     margin-left: -165px;
     font-size: 20px;
@@ -226,26 +292,32 @@ h2 {
 
 
 
-#myAnimation {
-    z-index: 1;
-    width: 100%;
-    height: 400%;
-    position: absolute;
-    background: rgb(133, 133, 133);
+.myAnimation {
+    background:red;
+  position:absolute;
+  top:0px;
+  right:0px;
+  bottom:0px;
+  left:0px;
+  height:100vh;
 }
 
 
 
-#discordTag {
-    position:fixed;
+#Extra {
+    position:fixed; 
+    text-align: left;
     top: 96.5%;
-    left: 92.5%;
+    text-anchor: end;
+    left: 91%;
     margin-top: 0px;
-    margin-left: 0px;
+    margin-left: 50px;
+    width: 100px;
+    text-align: right;
     font-family: 'Roboto Mono', monospace;
-    text-align: center;
     font-size: 20px;
-    color: rgba(0, 0, 0, 1);
+    white-space: nowrap;
+    color: rgb(255, 255, 255);
 }
 
 #games {
@@ -257,7 +329,7 @@ h2 {
     font-family: 'Open Sans', sans-serif;
     text-align: center;
     font-size: 40px;    
-    color: rgba(0, 0, 0, 1);
+    color: rgb(255, 255, 255);
 }
 
 #bestwork {
@@ -269,17 +341,22 @@ h2 {
     font-family: 'Open Sans', sans-serif;
     text-align: center;
     font-size: 40px;
-    color: rgba(0, 0, 0, 1);
+    color: rgb(255, 255, 255);
 }
 
 #GitHubImage {
-    margin-left: -100px;
+    margin-left: -130px;
 }
 
 #RobloxImage {
-    margin-left: 0px;
+    margin-left: -40px;
 }
 
 #Twitterimage {
-    margin-left: 100px;
+    margin-left: 50px;
+}
+
+#Discordimage {
+    margin-left: 140px;
+    cursor: pointer;
 }
