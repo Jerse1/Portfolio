@@ -275,8 +275,6 @@ h2 {
     margin-left: 15px;
     margin-top: -35px;
 
-    font-size: 18px;
-    text-align: left;
     transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
