@@ -2,12 +2,14 @@
     box-sizing: 0;
     margin: 0;
     padding: 0;
+    z-index: 1;
 }
 
 
 html, body {
     margin: 0px;
     height: 100%;
+    z-index: 0;
  }
 
 html {
@@ -361,6 +363,20 @@ h2 {
     text-align: center;
     font-size: 40px;    
     color: rgb(255, 255, 255);
+}
+
+#gifcontainer {
+    display: flex;
+    justify-content: center;
+}
+
+
+#gif {
+    width: 50%;
+    position: fixed;
+    z-index: 0.5;
+    opacity: 0.02;
+    filter: blur(15px);
 }
 
 #bestwork {
