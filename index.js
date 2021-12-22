@@ -8,6 +8,7 @@ function sleep(ms) {
 
 const main_nav = document.getElementById('aboutme');
 const Discord_Tag = "Jerse1#5645";
+var already = false;
 
 function findPos(obj) {
   var curtop = 0;
@@ -19,30 +20,6 @@ function findPos(obj) {
   }
 }
 
-
-
-let links = document.querySelectorAll('a');
-if (links){
-  links.forEach((link) =>{
-    link.onclick = (e) => {
-      let body = document.querySelector('body')
-      e.preventDefault();
-
-      setTimeout(function(){
-        if (body.classList.contains('fade-out')) {
-          console.log('navig');
-          if (!e.srcElement.parentElement.href){
-            window.location =  e.srcElement.href;
-
-          }else{
-            window.location =  e.srcElement.parentElement.href;
-          }
-        }
-      }, 500);
-      body.classList.add('fade-out');
-    }
-  })
-}
 
 document.getElementById("btn-1").addEventListener("mousedown", function(event) {
   window.scroll(0,1000);
@@ -59,7 +36,12 @@ var innerDivs = containerDiv.getElementsByClassName("Logo");
 
 document.getElementById("disc").onmouseup = function(){
   navigator.clipboard.writeText(Discord_Tag);
-  warn("Copied discord tag: " + Discord_Tag);
+  if (already == false){
+    //alert("Copied discord tag: " + Discord_Tag);
+    
+    already = true;
+  }
+  
 };
 
 window.addEventListener("scroll", () => {
